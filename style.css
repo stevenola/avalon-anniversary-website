@@ -253,13 +253,17 @@ nav {
 .cta-banner {
     background: var(--gold);
     color: var(--white);
-    padding: 5rem 0;
+    padding: 2.5rem 0 1.5rem;
     text-align: center;
 }
 
 .cta-banner h2 {
     font-family: var(--font-heading);
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cta-banner p {
     margin-bottom: 1rem;
 }
 
@@ -267,7 +271,7 @@ nav {
 footer {
     background: var(--gold);
     color: var(--white);
-    padding: 2rem 0 1rem;
+    padding: 1rem 0 0.5rem;
 }
 
 .footer-links-horizontal {
@@ -275,7 +279,7 @@ footer {
     justify-content: center;
     list-style: none;
     gap: 3rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .footer-links-horizontal a {
@@ -326,9 +330,9 @@ footer a:hover {
 
 .footer-bottom {
     border-top: 1px solid rgba(255,255,255,0.3);
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 /* Empowering Tagline */
@@ -342,12 +346,18 @@ footer a:hover {
 }
 
 /* Image Cards */
+.grid-3 {
+    align-items: stretch;
+}
+
 .image-card {
     background: var(--light-gray);
     border-radius: 8px;
     overflow: hidden;
     text-align: center;
     transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 
 .image-card:hover {
@@ -355,42 +365,46 @@ footer a:hover {
 }
 
 .image-card-img {
-    height: 180px;
+    height: 140px;
     background-size: cover;
     background-position: center;
     filter: brightness(0.85);
 }
 
 .image-card h3 {
-    padding: 1.5rem 1rem 0.5rem;
+    padding: 1rem 1rem 0.5rem;
     color: var(--navy);
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .image-card p {
-    padding: 0 1rem 1.5rem;
-    font-size: 0.95rem;
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
     color: var(--gray);
+    flex-grow: 1;
 }
 
 /* Budget Table */
 .budget-table-container {
     background: var(--white);
-    padding: 0.5rem;
+    padding: 0.75rem;
     margin: 0;
     border-radius: 8px 8px 0 0;
     overflow-x: auto;
+    height: 140px;
+    display: flex;
+    align-items: center;
 }
 
 .budget-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.65rem;
+    font-size: 0.75rem;
 }
 
 .budget-table th,
 .budget-table td {
-    padding: 0.2rem 0.3rem;
+    padding: 0.25rem 0.4rem;
     text-align: right;
     border: 1px solid #ccc;
 }

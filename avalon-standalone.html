@@ -260,13 +260,17 @@ nav {
 .cta-banner {
     background: var(--gold);
     color: var(--white);
-    padding: 5rem 0;
+    padding: 2.5rem 0 1.5rem;
     text-align: center;
 }
 
 .cta-banner h2 {
     font-family: var(--font-heading);
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cta-banner p {
     margin-bottom: 1rem;
 }
 
@@ -274,7 +278,7 @@ nav {
 footer {
     background: var(--gold);
     color: var(--white);
-    padding: 2rem 0 1rem;
+    padding: 1rem 0 0.5rem;
 }
 
 .footer-links-horizontal {
@@ -282,7 +286,7 @@ footer {
     justify-content: center;
     list-style: none;
     gap: 3rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .footer-links-horizontal a {
@@ -333,9 +337,9 @@ footer a:hover {
 
 .footer-bottom {
     border-top: 1px solid rgba(255,255,255,0.3);
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 /* Empowering Tagline */
@@ -349,12 +353,18 @@ footer a:hover {
 }
 
 /* Image Cards */
+.grid-3 {
+    align-items: stretch;
+}
+
 .image-card {
     background: var(--light-gray);
     border-radius: 8px;
     overflow: hidden;
     text-align: center;
     transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 
 .image-card:hover {
@@ -362,42 +372,46 @@ footer a:hover {
 }
 
 .image-card-img {
-    height: 180px;
+    height: 140px;
     background-size: cover;
     background-position: center;
     filter: brightness(0.85);
 }
 
 .image-card h3 {
-    padding: 1.5rem 1rem 0.5rem;
+    padding: 1rem 1rem 0.5rem;
     color: var(--navy);
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .image-card p {
-    padding: 0 1rem 1.5rem;
-    font-size: 0.95rem;
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
     color: var(--gray);
+    flex-grow: 1;
 }
 
 /* Budget Table */
 .budget-table-container {
     background: var(--white);
-    padding: 0.5rem;
+    padding: 0.75rem;
     margin: 0;
     border-radius: 8px 8px 0 0;
     overflow-x: auto;
+    height: 140px;
+    display: flex;
+    align-items: center;
 }
 
 .budget-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.65rem;
+    font-size: 0.75rem;
 }
 
 .budget-table th,
 .budget-table td {
-    padding: 0.2rem 0.3rem;
+    padding: 0.25rem 0.4rem;
     text-align: right;
     border: 1px solid #ccc;
 }
@@ -494,23 +508,9 @@ footer a:hover {
                             <tbody>
                                 <tr><td>Accessories</td><td>2,524</td><td>3,564</td><td>1,872</td><td>504</td><td class="total">8,464</td></tr>
                                 <tr><td>Dresses</td><td>29,456</td><td>59,684</td><td>40,548</td><td>49,312</td><td class="total">179,000</td></tr>
-                                <tr><td>FF Bottoms</td><td>136</td><td>1,308</td><td>1,696</td><td>1,424</td><td class="total">4,564</td></tr>
-                                <tr><td>FF Dresses</td><td>132</td><td>1,296</td><td>1,572</td><td>1,684</td><td class="total">4,684</td></tr>
-                                <tr><td>FF Tops</td><td>3,560</td><td>5,288</td><td>6,300</td><td>5,304</td><td class="total">20,452</td></tr>
-                                <tr><td>Gifts</td><td>120</td><td>660</td><td>192</td><td>92</td><td class="total">1,064</td></tr>
                                 <tr><td>Handbags</td><td>3,336</td><td>8,284</td><td>5,920</td><td>7,244</td><td class="total">24,784</td></tr>
                                 <tr><td>Jackets</td><td>880</td><td>2,804</td><td>1,592</td><td>3,088</td><td class="total">8,364</td></tr>
                                 <tr><td>Jeans</td><td>8,796</td><td>10,968</td><td>10,824</td><td>13,552</td><td class="total">44,140</td></tr>
-                                <tr><td>Jewelry</td><td>5,596</td><td>7,232</td><td>6,628</td><td>3,748</td><td class="total">23,204</td></tr>
-                                <tr><td>Pajamas</td><td>2,616</td><td>1,488</td><td>416</td><td>256</td><td class="total">4,776</td></tr>
-                                <tr><td>Pants</td><td>676</td><td>6,908</td><td>10,560</td><td>12,924</td><td class="total">31,068</td></tr>
-                                <tr><td>Shoes</td><td>5,328</td><td>9,716</td><td>8,208</td><td>10,308</td><td class="total">33,560</td></tr>
-                                <tr><td>Shorts (Inc Denim)</td><td>17,776</td><td>16,980</td><td>11,928</td><td>14,096</td><td class="total">60,780</td></tr>
-                                <tr><td>Skirts</td><td>3,804</td><td>6,480</td><td>7,656</td><td>9,380</td><td class="total">27,320</td></tr>
-                                <tr><td>Sweaters</td><td>1,548</td><td>6,464</td><td>8,340</td><td>11,428</td><td class="total">27,780</td></tr>
-                                <tr><td>Tees</td><td>5,372</td><td>7,076</td><td>3,888</td><td>4,516</td><td class="total">20,852</td></tr>
-                                <tr><td>Tops</td><td>39,828</td><td>44,016</td><td>38,516</td><td>48,924</td><td class="total">171,284</td></tr>
-                                <tr class="total-row"><td></td><td>131,484</td><td>200,216</td><td>166,656</td><td>197,784</td><td class="total">696,140</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -561,8 +561,8 @@ footer a:hover {
         <section id="contact" class="cta-banner">
             <div class="container">
                 <h2>Ready to grow profitably?</h2>
-                <p>Schedule a call with Steve or Julia to discuss your specific goals.</p>
-                <a href="mailto:info@avalonretailconsulting.com" class="btn-large white">Contact Us Today</a>
+                <p>Schedule a call to discuss your specific goals.</p>
+                <a href="mailto:info@avalonretailconsulting.com" class="btn-large white">Contact Us</a>
             </div>
         </section>
     </main>
