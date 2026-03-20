@@ -439,6 +439,499 @@ footer a:hover {
     height: auto;
 }
 
+/* Anniversary Badge */
+.anniversary-badge {
+    width: 160px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--navy);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Responsive */
+/* Active Nav Link */
+.nav-links a.active {
+    color: var(--gold);
+}
+
+/* Page Hero (for interior pages) */
+.page-hero {
+    background: linear-gradient(rgba(0,51,102,0.85), rgba(0,51,102,0.85)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=2070') center/cover;
+    padding: 6rem 0 4rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+/* Services Page */
+.services-intro {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.services-intro .intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.services-intro h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--navy);
+}
+
+.services-intro p {
+    color: var(--gray);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.services-detail {
+    padding: 3rem 0;
+    background: var(--light-gray);
+}
+
+.service-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.service-block:last-child {
+    margin-bottom: 0;
+}
+
+.service-block.reverse {
+    direction: rtl;
+}
+
+.service-block.reverse > * {
+    direction: ltr;
+}
+
+.service-content {
+    padding: 3rem;
+}
+
+.service-content h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--navy);
+    margin-bottom: 1rem;
+}
+
+.service-content p {
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+.service-content .feature-list {
+    margin-top: 1.5rem;
+}
+
+.service-content .feature-list li {
+    margin-bottom: 0.5rem;
+    color: var(--black);
+}
+
+.service-image {
+    height: 100%;
+    min-height: 350px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* How We Work Section */
+.how-we-work {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.how-we-work h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--navy);
+}
+
+.how-we-work .subtitle {
+    margin-bottom: 3rem;
+}
+
+.work-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.work-number {
+    width: 50px;
+    height: 50px;
+    background: var(--gold);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 1rem;
+}
+
+.work-card h3 {
+    color: var(--navy);
+    margin-bottom: 1rem;
+}
+
+.work-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+/* Team Page */
+.team-intro {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.team-intro .intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.team-intro h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--navy);
+}
+
+.team-intro p {
+    color: var(--gray);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.team-members {
+    padding: 2rem 0 5rem;
+}
+
+.team-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.team-card {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    background: var(--light-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.team-card:nth-child(even) {
+    direction: rtl;
+}
+
+.team-card:nth-child(even) > * {
+    direction: ltr;
+}
+
+.team-photo {
+    height: 100%;
+    min-height: 350px;
+    overflow: hidden;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.team-info {
+    padding: 2rem 3rem 2rem 0;
+}
+
+.team-card:nth-child(even) .team-info {
+    padding: 2rem 0 2rem 3rem;
+}
+
+.team-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--navy);
+    margin-bottom: 0.25rem;
+}
+
+.team-title {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.team-bio {
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+.team-contact {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.team-contact a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.team-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Testimonials Page */
+.testimonials-full {
+    padding: 4rem 0;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: var(--light-gray);
+    padding: 2.5rem;
+    border-radius: 8px;
+    position: relative;
+}
+
+.quote-icon {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    opacity: 0.5;
+}
+
+.testimonial-text {
+    color: var(--gray);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.testimonial-author {
+    margin-top: 1.5rem;
+}
+
+.testimonial-author cite {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+/* Contact Page */
+.contact-section {
+    padding: 4rem 0;
+}
+
+/* Thank You Page */
+.thank-you-section {
+    padding: 8rem 0;
+    text-align: center;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.thank-you-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.thank-you-content h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+}
+
+.thank-you-content p {
+    color: var(--gray);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.contact-info h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--navy);
+    margin-bottom: 1rem;
+}
+
+.contact-info > p {
+    color: var(--gray);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.contact-details {
+    margin-bottom: 2rem;
+}
+
+.contact-item h3 {
+    color: var(--navy);
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+
+.contact-item p {
+    color: var(--gray);
+}
+
+.contact-item a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.why-contact h3 {
+    color: var(--navy);
+    margin-bottom: 1rem;
+}
+
+.why-contact .feature-list li {
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+}
+
+.contact-form-container {
+    background: var(--light-gray);
+    padding: 2.5rem;
+    border-radius: 8px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form .btn-large {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+.contact-form .btn-large:hover {
+    background: var(--gold);
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .grid-3, .grid-2-rev, .grid-4 {
@@ -449,7 +942,104 @@ footer a:hover {
         font-size: 2.5rem;
     }
     
+    .hamburger {
+        display: flex;
+    }
+    
     .nav-links {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 1rem 2rem 2rem;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        gap: 0;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--light-gray);
+    }
+    
+    .nav-links li:last-child {
+        border-bottom: none;
+        padding-top: 1rem;
+    }
+    
+    .nav-links .btn-primary {
+        display: inline-block;
+        text-align: center;
+    }
+    
+    header {
+        position: relative;
+    }
+    
+    nav {
+        position: relative;
+    }
+    
+    /* Page Hero Mobile */
+    .page-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    /* Services Mobile */
+    .service-block {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .service-block.reverse {
+        direction: ltr;
+    }
+    
+    .service-content {
+        padding: 2rem;
+    }
+    
+    .service-image {
+        min-height: 250px;
+        order: -1;
+    }
+    
+    /* Team Mobile */
+    .team-card {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .team-card:nth-child(even) {
+        direction: ltr;
+    }
+    
+    .team-photo {
+        min-height: 300px;
+    }
+    
+    .team-info {
+        padding: 2rem !important;
+    }
+    
+    /* Testimonials Mobile */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contact Mobile */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-form-container {
+        padding: 1.5rem;
     }
 }

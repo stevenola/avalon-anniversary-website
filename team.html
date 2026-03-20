@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team | Avalon Retail Consulting</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html"><img src="assets/logo.png" alt="Avalon Retail Consulting Logo"></a>
+            </div>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="team.html" class="active">Our Team</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html" class="btn-primary">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero team-hero">
+            <div class="container hero-content">
+                <h1>Our Team</h1>
+                <p>Experienced professionals dedicated to your retail success.</p>
+            </div>
+        </section>
+
+        <section class="team-intro container">
+            <div class="intro-content">
+                <h2>We're Passionate About Our Clients' Success</h2>
+                <p>Our talented team knows what it takes to be successful in the evolving retail industry. We apply our own experience and the knowledge gained from working with hundreds of retail businesses to help our clients grow.</p>
+                <p>Whether you're starting up, trying to grow more profitable, or preparing to pass your business on, we can help you too!</p>
+            </div>
+        </section>
+
+        <section class="team-members container">
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="assets/steve.jpg" alt="Steve - Founder & President">
+                    </div>
+                    <div class="team-info">
+                        <h3>Steve</h3>
+                        <p class="team-title">Founder & President</p>
+                        <p class="team-bio">My first job after college was working for a department store chain where I learned about operations, buying and store management. My experience was often trial by fire which gave me plenty of opportunities to learn from my mistakes.</p>
+                        <p class="team-bio">Over time I realized most retailers face the challenges I had, but there were not a lot of sources for help. That led me to start Avalon in 1996 where I learned how small businesses should work. From these experiences I learned the skills I use to help our clients grow their business and hopefully avoid some of the mistakes I made.</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="assets/katie.jpg" alt="Katie Barton - Senior Consultant">
+                    </div>
+                    <div class="team-info">
+                        <h3>Katie Barton</h3>
+                        <p class="team-title">Senior Consultant</p>
+                        <p class="team-bio">Katie Barton is an accomplished member of the Avalon team with an expertise in the fashion industry. She worked with California based contemporary designer Cynthia Vincent for seven years expanding the brand across the globe. Katie launched her New York showroom and managed department store business working closely with buyers and store managers.</p>
+                        <p class="team-bio">She was responsible for all regional markets as well as promoting the brand during fashion week. In addition to her wholesale experience, Katie has worked in small business and corporate retail. Katie is a graduate of Louisiana State University with a Bachelor of Arts in Marketing.</p>
+                        <p class="team-contact"><a href="mailto:katie@avalonretailconsulting.com">katie@avalonretailconsulting.com</a> | <a href="tel:504-957-2600">504-957-2600</a></p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="assets/kelly.jpg" alt="Kelly Grace - Retail Consultant">
+                    </div>
+                    <div class="team-info">
+                        <h3>Kelly Grace</h3>
+                        <p class="team-title">Retail Consultant</p>
+                        <p class="team-bio">With over 10 years of experience in education and business management and a love for fashion, Kelly is a dedicated and enthusiastic team player who takes great pride in her work. Her retail experience started early on in her late teen years, working at a few New Orleans well-known women's boutiques during the summers and on the weekends.</p>
+                        <p class="team-bio">After graduating from the University of Georgia in 2009, Kelly spent three years in Washington, D.C., where she taught in the public school system. In 2012, Kelly moved home to New Orleans to continue her teaching career. After the arrival of her twin boys, Kelly shifted her focus to business management, a role in which she quickly flourished. In 2022, she co-founded and launched Get Organized, a home organization company.</p>
+                        <p class="team-contact"><a href="mailto:kelly@avalonretailconsulting.com">kelly@avalonretailconsulting.com</a> | <a href="tel:504-453-3888">504-453-3888</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-banner">
+            <div class="container">
+                <h2>Ready To Work With Our Team?</h2>
+                <p>Let's discuss how we can help your retail business thrive.</p>
+                <a href="contact.html" class="btn-large white">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <ul class="footer-links-horizontal">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Avalon Retail Consulting, Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

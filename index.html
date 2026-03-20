@@ -13,13 +13,18 @@
     <header>
         <nav class="container">
             <div class="logo">
-                <img src="assets/logo.png" alt="Avalon Retail Consulting Logo">
+                <a href="index.html"><img src="assets/logo.png" alt="Avalon Retail Consulting Logo"></a>
             </div>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#team">Our Team</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact" class="btn-primary">Contact Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html" class="btn-primary">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -27,18 +32,19 @@
     <main>
         <section class="hero">
             <div class="container hero-content">
-                <h1>Take Your Retail Business<br>To The Next Level</h1>
-                <p>For over 30 years, we've helped retailers grow profitably through data-driven strategies and personalized consulting.</p>
+                <h1>Built for Boutiques. Focused on Profit</h1>
+                <p>Empowering retailers for over 30 years.  We've helped retailers grow profitably through buying budgets, cash flow, open to buy and personalized consulting.</p>
+                <a href="contact.html" class="btn-large white">Contact Us</a>
             </div>
         </section>
 
         <section id="about" class="intro container">
             <h2>Success Takes More Than Just Buying and Selling</h2>
-            <p class="subtitle">Owning a retail business can be challenging and stressful. It's hard to know if you're do things the most effective way.</p>
+            <p class="subtitle">Owning a retail business can be challenging and stressful. It's hard to know if you're doing things the most effective way.</p>
             <div class="grid-3">
                 <div class="image-card">
                     <div class="image-card-img" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800');"></div>
-                    <h3>Making The Best Decisions For My Business</h3>
+                    <h3>Making The Best Decisions For Your Business</h3>
                     <p>In the competitive retail industry, it's hard to know if you're making the right decisions. Other owners don't want to share their strategies.</p>
                 </div>
                 <div class="image-card center-card">
@@ -57,12 +63,12 @@
                             </tbody>
                         </table>
                     </div>
-                    <h3>Choosing The Right Information To Optimize My Profit</h3>
-                    <p>No one ever went into retail to do math. But retail success requires choosing and using the right information.</p>
+                    <h3>Choosing The Right Key Metrics To Optimize Your Profit</h3>
+                    <p>Retail success requires deciding on the right information to focus on and effectively implementing it.</p>
                 </div>
                 <div class="image-card">
                     <div class="image-card-img" style="background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800');"></div>
-                    <h3>Managing My Employees and Outside Resources</h3>
+                    <h3>Managing Your Employees and Outside Resources</h3>
                     <p>Managing employees and outside resources is one of the most stressful parts of running a retail business.</p>
                 </div>
             </div>
@@ -71,13 +77,14 @@
         <section id="services" class="services-highlight">
             <div class="container grid-2-rev">
                 <div class="text-content">
-                    <h2>We Could Be Your Competitive Edge</h2>
+                    <img src="assets/Avalon_30th_Badge_transparent_512.png" alt="Avalon 30 Years 1996-2026" class="anniversary-badge">
+                    <h2>We Are Your Competitive Edge</h2>
                     <p>Data is the key to retail success. No one goes into retail to do math, but the right information optimizes your store's profit. We turn complex data into actionable plans.</p>
                     <ul class="feature-list">
                         <li>Customized Open-to-Buy Plans</li>
                         <li>Monthly Cash Flow Analysis</li>
                         <li>Inventory Management Strategies</li>
-                        <li>Expert Advisor Partnership</li>
+                        <li>Your Personal Buying Advisor</li>
                     </ul>
                 </div>
                 <div class="image-placeholder">
@@ -87,7 +94,7 @@
         </section>
 
         <section id="testimonials" class="testimonials container">
-            <p class="empowering-tagline">Empowering retailers for over 30 years</p>
+            <!-- <p class="empowering-tagline">Empowering retailers for over 30 years</p> -->
             <h2>What Our Clients Say</h2>
             <div class="testimonial-slider">
                 <blockquote>
@@ -103,9 +110,9 @@
 
         <section id="contact" class="cta-banner">
             <div class="container">
-                <h2>Ready to grow profitably?</h2>
+                <h2>Let's Build Your Most Profitable Season Yet</h2>
                 <p>Schedule a call to discuss your specific goals.</p>
-                <a href="mailto:info@avalonretailconsulting.com" class="btn-large white">Contact Us</a>
+                <a href="contact.html" class="btn-large white">Contact Us</a>
             </div>
         </section>
     </main>
@@ -113,15 +120,33 @@
     <footer>
         <div class="container">
             <ul class="footer-links-horizontal">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#team">Our Team</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </div>
         <div class="footer-bottom container">
             <p>&copy; 2026 Avalon Retail Consulting, Inc. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
