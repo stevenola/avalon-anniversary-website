@@ -31,9 +31,9 @@ def inline_images(html_content, css_content):
     local_images = [
         ('assets/logo.png', 'src="assets/logo.png"', 'src="{}"'),
         ('assets/Avalon_30th_Badge_transparent_512.png', 'src="assets/Avalon_30th_Badge_transparent_512.png"', 'src="{}"'),
-        ('assets/steve.jpg', 'src="assets/steve.jpg"', 'src="{}"'),
-        ('assets/katie.jpg', 'src="assets/katie.jpg"', 'src="{}"'),
-        ('assets/kelly.jpg', 'src="assets/kelly.jpg"', 'src="{}"'),
+        ('assets/steve.png', 'src="assets/steve.png"', 'src="{}"'),
+        ('assets/katie.png', 'src="assets/katie.png"', 'src="{}"'),
+        ('assets/kelly.png', 'src="assets/kelly.png"', 'src="{}"'),
     ]
     
     for filename, search, replace_template in local_images:
