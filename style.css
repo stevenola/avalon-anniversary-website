@@ -122,7 +122,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0,51,102,0.5), rgba(0,51,102,0.5)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=2070') center/cover;
+    background: url('assets/hero-homepage.png') center/cover;
     height: 80vh;
     display: flex;
     align-items: center;
@@ -271,7 +271,38 @@ nav {
 footer {
     background: var(--navy);
     color: var(--white);
-    padding: 1rem 0 0.5rem;
+    padding: 2rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.footer-section h4 {
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-section p,
+.footer-section a {
+    color: var(--white);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-section a {
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: var(--gold);
 }
 
 .footer-links-horizontal {
@@ -291,6 +322,25 @@ footer {
 
 .footer-links-horizontal a:hover {
     opacity: 0.8;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.social-links a:hover {
+    color: var(--gold);
 }
 
 .grid-4 {
@@ -493,10 +543,26 @@ footer a:hover {
 
 /* Page Hero (for interior pages) */
 .page-hero {
-    background: linear-gradient(rgba(0,51,102,0.85), rgba(0,51,102,0.85)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=2070') center/cover;
+    background: center/cover;
     padding: 6rem 0 4rem;
     color: var(--white);
     text-align: center;
+}
+
+.services-hero {
+    background-image: url('assets/hero-services.png');
+}
+
+.team-hero {
+    background-image: url('assets/hero-team.png');
+}
+
+.testimonials-hero {
+    background-image: url('assets/hero-testimonials.png');
+}
+
+.contact-hero {
+    background-image: url('assets/hero-contact.png');
 }
 
 .page-hero h1 {
@@ -825,12 +891,25 @@ footer a:hover {
 .thank-you-content p {
     color: var(--gray);
     font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.thank-you-cta {
+    color: var(--navy);
+    font-weight: 600;
     margin-bottom: 2rem;
+}
+
+.thank-you-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 3fr;
     gap: 4rem;
     align-items: start;
 }
@@ -1037,9 +1116,17 @@ footer a:hover {
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+        display: flex;
+        flex-direction: column-reverse;
     }
     
     .contact-form-container {
         padding: 1.5rem;
+    }
+    
+    /* Footer Mobile */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 }
