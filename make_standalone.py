@@ -27,7 +27,7 @@ def get_base64_image(url_or_path):
 def inline_images(html_content, css_content):
     """Inline all images (local and remote) into base64"""
     
-    # Local asset images
+    # Local asset images (in HTML)
     local_images = [
         ('assets/logo.png', 'src="assets/logo.png"', 'src="{}"'),
         ('assets/Avalon_30th_Badge_transparent_512.png', 'src="assets/Avalon_30th_Badge_transparent_512.png"', 'src="{}"'),
@@ -42,7 +42,23 @@ def inline_images(html_content, css_content):
             b64 = get_base64_image(str(filepath))
             html_content = html_content.replace(search, replace_template.format(b64))
     
-    # Remote Unsplash images (used in inline styles)
+    # Local hero images (in CSS)
+    local_css_images = [
+        'assets/hero-homepage.png',
+        'assets/hero-services.png',
+        'assets/hero-team.png',
+        'assets/hero-testimonials.png',
+        'assets/hero-contact.png',
+        'assets/services-section-panel.png',
+    ]
+    
+    for filename in local_css_images:
+        filepath = BASE_DIR / filename
+        if filepath.exists():
+            b64 = get_base64_image(str(filepath))
+            css_content = css_content.replace(f"url('{filename}')", f"url('{b64}')")
+    
+    # Remote Unsplash images (used in inline styles - keeping for any remaining references)
     remote_images = [
         'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=2070',
         'https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&q=80&w=2070',
